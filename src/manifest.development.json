@@ -6,7 +6,7 @@
   "background": {
     "service_worker": "/background.js"
   },
-  "permissions": ["tabs", "storage"],
+  "permissions": ["storage"],
   "action": {
     "browser_action": "starwall.html",
     "default_icon": "icons/logo.png"
@@ -16,15 +16,5 @@
     "32": "icons/icon32.png",
     "192": "icons/icon192.png"
   },
-  "content_scripts": [
-    {
-      "matches": [
-        "<all_urls>"
-      ],
-      "js": [
-        "/content.js"
-      ]
-    }
-  ],
   "options_page": "options.html"
 }
