@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "StarWall",
+  "description": "StarWall",
+  "version": "0.1.0",
+  "background": {
+    "service_worker": "/background.js"
+  },
+  "permissions": ["tabs", "storage"],
+  "action": {
+    "browser_action": "starwall.html",
+    "default_icon": "icons/logo.png"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "192": "icons/icon192.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "/content.js",
+        "/options.js"
+      ]
+    }
+  ],
+  "options_page": "options.html"
+}
